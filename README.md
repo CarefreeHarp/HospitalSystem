@@ -1,6 +1,15 @@
 # Sistema Hospitalario San Vicente
 
 Aplicación de consola en Java que simula el funcionamiento de los módulos clave de un sistema hospitalario, enfocado en el área de emergencias. Desarrollado como parte de un proyecto académico para la Pontificia Universidad Javeriana.
+Este proyecto busca la aplicación de los conocimientos adquiridos en la clase de Análisis y diseño de Software poniendo en práctica patrones de diseño de software y buenas prácticas de desarrollo entre los cuales están patrones creacionales como factory method, de comportamiendo como strategy o observer e incluso la aplicacion de principios SOLID para el desarrollo de nuestro sistema
+
+Integrantes:
+Daniel Felipe Ramírez Vargas
+Nicolás Castañeda Vargas
+Guillermo Aponte Cardenas
+María Fernanda Cruz Niño 
+
+
 
 ---
 
