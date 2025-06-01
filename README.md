@@ -1,10 +1,10 @@
-# 🏥 Sistema Hospitalario San Vicente
+# Sistema Hospitalario San Vicente
 
 Aplicación de consola en Java que simula el funcionamiento de los módulos clave de un sistema hospitalario, enfocado en el área de emergencias. Desarrollado como parte de un proyecto académico para la Pontificia Universidad Javeriana.
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```plaintext
 Hospital/
@@ -42,7 +42,7 @@ Hospital/
 
 ---
 
-## 🧩 Módulos Implementados
+## Módulos Implementados
 
 ### 1. Módulo de Interfaz
 
@@ -65,10 +65,10 @@ Hospital/
 
 ---
 
-## 🧠 Principios de Diseño
+## Principios de Diseño (Solicitados Por el Proyecto)
 
-- ✔️ Principios SOLID en la definición de interfaces.
-- ✔️ Patrones de diseño:
+-  Principios SOLID en la definición de interfaces.
+-  Patrones de diseño:
   - **Factory Method** (Registro de pacientes)
   - **Strategy** (Cálculo de prioridad en Triage)
   - **Observer** (Alerta de espera en Triage)
