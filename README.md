@@ -6,36 +6,38 @@ Aplicación de consola en Java que simula el funcionamiento de los módulos clav
 
 ## 📂 Estructura del Proyecto
 
+```plaintext
 Hospital/
 ├── Main.java
 ├── Interfaz/
-│ ├── MenuInterfaz.java
-│ ├── VisualizacionPaciente.java
-│ ├── CalculoPrioridades.java
-│ └── ConfiguracionDePantalla.java
+│   ├── MenuInterfaz.java
+│   ├── VisualizacionPaciente.java
+│   ├── CalculoPrioridades.java
+│   └── ConfiguracionDePantalla.java
 ├── Registro/
-│ ├── MenuRegistro.java
-│ ├── Paciente.java
-│ ├── RegistroPacienteFactory.java
-│ ├── InterfaceRegistroPaciente.java
-│ ├── InterfaceBusquedaPaciente.java
-│ ├── BusquedaPaciente.java
-│ ├── InterfaceEditarPaciente.java
-│ ├── EditarPaciente.java
-│ ├── InterfaceAutorizacionDeAcceso.java
-│ ├── AutorizacionDeAcceso.java
-│ ├── InterfaceVerificadorDeSeguridad.java
-│ ├── VerificadorDeSeguridad.java
-│ ├── InterfaceIntegracionHistorial.java
-│ └── IntegracionHistorial.java
+│   ├── MenuRegistro.java
+│   ├── Paciente.java
+│   ├── RegistroPacienteFactory.java
+│   ├── InterfaceRegistroPaciente.java
+│   ├── InterfaceBusquedaPaciente.java
+│   ├── BusquedaPaciente.java
+│   ├── InterfaceEditarPaciente.java
+│   ├── EditarPaciente.java
+│   ├── InterfaceAutorizacionDeAcceso.java
+│   ├── AutorizacionDeAcceso.java
+│   ├── InterfaceVerificadorDeSeguridad.java
+│   ├── VerificadorDeSeguridad.java
+│   ├── InterfaceIntegracionHistorial.java
+│   └── IntegracionHistorial.java
 ├── Triage/
-│ ├── MenuTriage.java
-│ ├── InterfaceClasificarPrioridad.java
-│ ├── ClasificarPrioridad.java
-│ ├── InterfaceValidacionDatos.java
-│ ├── ValidacionDatos.java
-│ ├── InterfaceMonitoreoTiempo.java
-│ └── MonitoreoTiempo.java
+│   ├── MenuTriage.java
+│   ├── InterfaceClasificarPrioridad.java
+│   ├── ClasificarPrioridad.java
+│   ├── InterfaceValidacionDatos.java
+│   ├── ValidacionDatos.java
+│   ├── InterfaceMonitoreoTiempo.java
+│   └── MonitoreoTiempo.java
+
 
 
 ---
