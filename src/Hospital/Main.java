@@ -3,6 +3,7 @@ package Hospital;
 import Hospital.Interfaz.MenuInterfaz;
 import Hospital.Registro.MenuRegistro;
 import Hospital.Triage.MenuTriage;
+import Hospital.AdministracionDeRecursosMedicos.MenuAdministracionDeRecursosMedicos;
 
 import java.util.Scanner;
 
@@ -20,6 +21,7 @@ public class Main {
                 case 1 -> mostrarMenuInterfaz(scanner);
                 case 2 -> mostrarMenuRegistro(scanner);
                 case 3 -> mostrarMenuTriage(scanner);
+                case 4 -> mostrarMenuRecursosMedicos();
                 case 9 -> {
                     System.out.println("¡Hasta luego!");
                     continuar = false;
@@ -32,7 +34,6 @@ public class Main {
                 scanner.nextLine();
             }
         }
-
     }
 
     private static void mostrarMenu() {
@@ -42,6 +43,7 @@ public class Main {
         System.out.println("1. Módulo de Interfaz");
         System.out.println("2. Módulo de Registro");
         System.out.println("3. Módulo de Triage");
+        System.out.println("4. Módulo de Recursos Médicos");
         System.out.println("9. Salir");
         System.out.print("Seleccione una opción: ");
     }
@@ -69,5 +71,10 @@ public class Main {
     private static void mostrarMenuTriage(Scanner scanner) {
         MenuTriage menuTriage = new MenuTriage();
         menuTriage.mostrar(scanner);
+    }
+
+    private static void mostrarMenuRecursosMedicos() {
+        MenuAdministracionDeRecursosMedicos menuRecursos = new MenuAdministracionDeRecursosMedicos();
+        menuRecursos.mostrarMenu();
     }
 }

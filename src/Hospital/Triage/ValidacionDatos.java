@@ -10,6 +10,8 @@ public class ValidacionDatos implements InterfaceValidacionDatos {
 
     @Override
     public String calcularPrioridad() {
+
+        // En base a los signos vitales, se determina la prioridad del paciente.
         boolean critico = datos.getPresionSistolica() > 180 || datos.getPresionDiastolica() > 120;
         boolean urgente = datos.getTemperatura() > 39;
         boolean oxigenoBajo = datos.getSaturacionOxigeno() < 92;
