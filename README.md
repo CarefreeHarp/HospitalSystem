@@ -1,18 +1,74 @@
-## Getting Started
+# 🏥 Sistema Hospitalario San Vicente
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Aplicación de consola en Java que simula el funcionamiento de los módulos clave de un sistema hospitalario, enfocado en el área de emergencias. Desarrollado como parte de un proyecto académico para la Pontificia Universidad Javeriana.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 📂 Estructura del Proyecto
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Hospital/
+├── Main.java
+├── Interfaz/
+│ ├── MenuInterfaz.java
+│ ├── VisualizacionPaciente.java
+│ ├── CalculoPrioridades.java
+│ └── ConfiguracionDePantalla.java
+├── Registro/
+│ ├── MenuRegistro.java
+│ ├── Paciente.java
+│ ├── RegistroPacienteFactory.java
+│ ├── InterfaceRegistroPaciente.java
+│ ├── InterfaceBusquedaPaciente.java
+│ ├── BusquedaPaciente.java
+│ ├── InterfaceEditarPaciente.java
+│ ├── EditarPaciente.java
+│ ├── InterfaceAutorizacionDeAcceso.java
+│ ├── AutorizacionDeAcceso.java
+│ ├── InterfaceVerificadorDeSeguridad.java
+│ ├── VerificadorDeSeguridad.java
+│ ├── InterfaceIntegracionHistorial.java
+│ └── IntegracionHistorial.java
+├── Triage/
+│ ├── MenuTriage.java
+│ ├── InterfaceClasificarPrioridad.java
+│ ├── ClasificarPrioridad.java
+│ ├── InterfaceValidacionDatos.java
+│ ├── ValidacionDatos.java
+│ ├── InterfaceMonitoreoTiempo.java
+│ └── MonitoreoTiempo.java
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+---
 
-## Dependency Management
+## 🧩 Módulos Implementados
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### 1. Módulo de Interfaz
+
+- Visualización de signos vitales, medicamentos y alergias.
+- Escala de Glasgow y resultados del triaje.
+- Ajustes de resolución y modo oscuro.
+
+### 2. Módulo de Registro
+
+- Registro de pacientes en un `ArrayList` simulando una base de datos.
+- Consulta, edición y verificación de duplicados.
+- Control de acceso, seguridad y validaciones.
+- Simulación de integración con historial clínico.
+
+### 3. Módulo de Triage
+
+- Registro y validación de signos vitales.
+- Cálculo automático de prioridad médica.
+- Monitoreo del tiempo de espera y alertas.
+
+---
+
+## 🧠 Principios de Diseño
+
+- ✔️ Principios SOLID en la definición de interfaces.
+- ✔️ Patrones de diseño:
+  - **Factory Method** (Registro de pacientes)
+  - **Strategy** (Cálculo de prioridad en Triage)
+  - **Observer** (Alerta de espera en Triage)
+
+---
