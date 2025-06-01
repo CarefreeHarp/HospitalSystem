@@ -1,6 +1,6 @@
 package Hospital.Interfaz;
 
-public class CalculoPrioridades {
+public class CalculoPrioridades implements InterfaceCalculoPrioridades{
 
     private double temperatura;
     private int presionSistolica;
