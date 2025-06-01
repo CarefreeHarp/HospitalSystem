@@ -37,7 +37,7 @@ Hospital/
 │   ├── ValidacionDatos.java
 │   ├── InterfaceMonitoreoTiempo.java
 │   └── MonitoreoTiempo.java
-
+```
 
 
 ---
