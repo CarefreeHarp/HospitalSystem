@@ -68,9 +68,9 @@ Hospital/
 ## Principios de Diseño (Solicitados Por el Proyecto)
 
 -  Principios SOLID en la definición de interfaces.
--  Patrones de diseño:
-  - **Factory Method** (Registro de pacientes)
-  - **Strategy** (Cálculo de prioridad en Triage)
-  - **Observer** (Alerta de espera en Triage)
+# -  Patrones de diseño:
+  - **Factory Method**: Registro de pacientes (Presente en la carpeta Registro en la clase RegistroPacienteFactory.java)
+  - **Strategy**: Cálculo de prioridad en Triage (El cálculo de la prioridad depende del Triage registrado y puede cambiar segun la necesidad) (Presente en la carpeta Triage en la clase ValidacionDatos.java)
+  - **Observer**: Alerta de espera en Triage (El sistema alerta si el tiempo de espera de un paciente es demasiado para una alerta específica) (Presente en la carpeta Triage en la clase MonitoreoTiempo.java)
 
 ---
