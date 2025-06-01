@@ -118,7 +118,8 @@ src/Hospital/
 - Filtrado por estado, historial de uso y control de stock.
 - Sincronización simulada en tiempo real.
 
-### 5. Módulo de Monitoreo del Sistema
+### 5. Módulo de Monitoreo del Sistema 
+- **Este Módulo es unicamente una simulación y no registra los verdaderos accesos ni registros a los demás modulos**
 - Registro de accesos, consultas y modificaciones por usuario.
 - Búsqueda de logs, exportación simulada y validaciones de seguridad.
 - Autenticación, bloqueo y trazabilidad del sistema.
@@ -149,5 +150,5 @@ src/Hospital/
 
 ---
 
-Este sistema demuestra cómo aplicar patrones de diseño y principios de arquitectura limpia para construir un simulador funcional, flexible y preparado para evolucionar hacia una versión más robusta y persistente.
+Este sistema demuestra cómo aplicar patrones de diseño y principios de arquitectura limpia para construir una simulacion de un sistema funcional, flexible y preparado para evolucionar hacia una versión más robusta y persistente.
 
