@@ -2,6 +2,7 @@ package Hospital;
 
 import Hospital.Interfaz.MenuInterfaz;
 import Hospital.Registro.MenuRegistro;
+import Hospital.Triage.MenuTriage;
 
 import java.util.Scanner;
 
@@ -16,19 +17,14 @@ public class Main {
             int opcion = leerOpcion(scanner);
 
             switch (opcion) {
-                case 1:
-                    mostrarMenuInterfaz(scanner);
-                    break;
-                case 2:
-                    mostrarMenuRegistro(scanner);
-                    break;
-                case 9:
+                case 1 -> mostrarMenuInterfaz(scanner);
+                case 2 -> mostrarMenuRegistro(scanner);
+                case 3 -> mostrarMenuTriage(scanner);
+                case 9 -> {
                     System.out.println("¡Hasta luego!");
                     continuar = false;
-                    break;
-                default:
-                    System.out.println("Opción inválida. Intente de nuevo.");
-                    break;
+                }
+                default -> System.out.println("Opción inválida. Intente de nuevo.");
             }
 
             if (continuar) {
@@ -37,7 +33,6 @@ public class Main {
             }
         }
 
-        scanner.close();
     }
 
     private static void mostrarMenu() {
@@ -46,6 +41,7 @@ public class Main {
         System.out.println("===================================");
         System.out.println("1. Módulo de Interfaz");
         System.out.println("2. Módulo de Registro");
+        System.out.println("3. Módulo de Triage");
         System.out.println("9. Salir");
         System.out.print("Seleccione una opción: ");
     }
@@ -68,5 +64,10 @@ public class Main {
     private static void mostrarMenuRegistro(Scanner scanner) {
         MenuRegistro menuRegistro = new MenuRegistro();
         menuRegistro.mostrar(scanner);
+    }
+
+    private static void mostrarMenuTriage(Scanner scanner) {
+        MenuTriage menuTriage = new MenuTriage();
+        menuTriage.mostrar(scanner);
     }
 }

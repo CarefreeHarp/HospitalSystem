@@ -7,13 +7,11 @@ import java.util.Scanner;
 public class MenuRegistro {
 
     private final RegistroPacienteFactory registroPaciente;
-    private final InterfaceBusquedaDePacientes busquedaPacientes;
     private final InterfaceEditarPacientes editarPacientes;
     private final InterfaceIntegracionHistorialClinico integracion;
 
     public MenuRegistro() {
         this.registroPaciente = new RegistroPacienteFactory();
-        this.busquedaPacientes = new BusquedaDePacientes();
         this.editarPacientes = new EditarPacientes();
         this.integracion = new IntegracionHistorialClinico();
     }
