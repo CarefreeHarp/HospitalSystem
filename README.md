@@ -28,6 +28,7 @@ Los siguientes usuarios están habilitados para los módulos con control de acce
 ---
 
 ## Estructura del Proyecto
+ ```
 src/Hospital/
 ├── AdministracionDeRecursosMedicos/
 │ ├── InterfaceGestionRecursos.java
@@ -89,6 +90,7 @@ src/Hospital/
 │ └── ValidacionDatos.java
 
 ├── Main.java
+ ```
 
 ---
 
