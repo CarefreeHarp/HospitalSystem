@@ -1,87 +1,149 @@
 # Sistema Hospitalario San Vicente
 
-Aplicación de consola en Java que simula el funcionamiento de los módulos clave de un sistema hospitalario, enfocado en el área de emergencias. Desarrollado como parte de un proyecto académico para la Pontificia Universidad Javeriana.
-Este proyecto busca la aplicación de los conocimientos adquiridos en la clase de Análisis y diseño de Software poniendo en práctica patrones de diseño de software y buenas prácticas de desarrollo entre los cuales están patrones creacionales como factory method, de comportamiendo como strategy o observer e incluso la aplicacion de principios SOLID para el desarrollo de nuestro sistema
+Aplicación de consola desarrollada en Java para simular el funcionamiento de un sistema hospitalario modular, con énfasis en el área de emergencias. Proyecto académico para la **Pontificia Universidad Javeriana**, desarrollado como parte del curso de **Análisis y Diseño de Software**.
 
-```plaintext
-Integrantes:
+Este sistema implementa principios de diseño SOLID y patrones como **Factory Method**, **Strategy** y **Observer**, integrando varios módulos que colaboran entre sí bajo una arquitectura estructurada y orientada a objetos.
+
+---
+
+## Integrantes del Proyecto
 Daniel Felipe Ramírez Vargas
 Nicolás Castañeda Vargas
-Guillermo Aponte Cardenas
-María Fernanda Cruz Niño 
-```
-
+Guillermo Aponte Cárdenas
+María Fernanda Cruz Niño
 
 
 ---
 
+## Usuarios Simulados que se pueden utilizar en la autenticacion
+
+Los siguientes usuarios están habilitados para los módulos con control de acceso:
+
+| Usuario      | Contraseña |
+|--------------|------------|
+| `admin`      | `admin`    |
+| `medico1`    | `abcd`     |
+| `enfermera1` | `pass`     |
+
+---
+
 ## Estructura del Proyecto
+src/Hospital/
+├── AdministracionDeRecursosMedicos/
+│ ├── InterfaceGestionRecursos.java
+│ ├── InterfaceSincronizacionTiempoReal.java
+│ ├── InterfaceInterfazUsuario.java
+│ ├── GestionRecursos.java
+│ ├── SincronizacionTiempoReal.java
+│ ├── InterfazUsuarioRecursos.java
+│ └── MenuAdministracionDeRecursosMedicos.java
 
-```plaintext
-Hospital/
-├── Main.java
+├── HistorialClinico/
+│ ├── AutorizacionAcceso.java
+│ ├── GestionAbandono.java
+│ ├── HistorialClinico.java
+│ ├── InterfaceAutorizacionAcceso.java
+│ ├── InterfaceGestionAbandono.java
+│ ├── InterfaceManejoHistorial.java
+│ └── MenuHistorialClinico.java
+
 ├── Interfaz/
-│   ├── MenuInterfaz.java
-│   ├── VisualizacionPaciente.java
-│   ├── CalculoPrioridades.java
-│   └── ConfiguracionDePantalla.java
-├── Registro/
-│   ├── MenuRegistro.java
-│   ├── Paciente.java
-│   ├── RegistroPacienteFactory.java
-│   ├── InterfaceRegistroPaciente.java
-│   ├── InterfaceBusquedaPaciente.java
-│   ├── BusquedaPaciente.java
-│   ├── InterfaceEditarPaciente.java
-│   ├── EditarPaciente.java
-│   ├── InterfaceAutorizacionDeAcceso.java
-│   ├── AutorizacionDeAcceso.java
-│   ├── InterfaceVerificadorDeSeguridad.java
-│   ├── VerificadorDeSeguridad.java
-│   ├── InterfaceIntegracionHistorial.java
-│   └── IntegracionHistorial.java
-├── Triage/
-│   ├── MenuTriage.java
-│   ├── InterfaceClasificarPrioridad.java
-│   ├── ClasificarPrioridad.java
-│   ├── InterfaceValidacionDatos.java
-│   ├── ValidacionDatos.java
-│   ├── InterfaceMonitoreoTiempo.java
-│   └── MonitoreoTiempo.java
-```
+│ ├── CalculoPrioridades.java
+│ ├── ConfiguracionDePantalla.java
+│ ├── InterfaceCalculoPrioridades.java
+│ ├── InterfaceConfiguracionDePantalla.java
+│ ├── InterfaceVisualizacionPaciente.java
+│ └── VisualizacionPaciente.java
 
+├── MonitoreoDelSistemaSimulacion/
+│ ├── Auditoria.java
+│ ├── Autenticador.java
+│ ├── InterfaceAuditoria.java
+│ ├── InterfaceAutenticador.java
+│ ├── InterfaceRegistroActividad.java
+│ ├── MenuMonitoreo.java
+│ ├── RegistroActividad.java
+│ └── Seguridad.java
+
+├── Registro/
+│ ├── AutorizacionDeAcceso.java
+│ ├── BusquedaDePacientes.java
+│ ├── EditarPacientes.java
+│ ├── IntegracionHistorialClinico.java
+│ ├── InterfaceAutorizacionDeAcceso.java
+│ ├── InterfaceBusquedaDePacientes.java
+│ ├── InterfaceEditarPacientes.java
+│ ├── InterfaceIntegracionHistorialClinico.java
+│ ├── InterfaceRegistroPaciente.java
+│ ├── MenuRegistro.java
+│ ├── Paciente.java
+│ └── RegistroPacienteFactory.java
+
+├── Triage/
+│ ├── ClasificarPrioridad.java
+│ ├── InterfaceClasificarPrioridad.java
+│ ├── InterfaceMonitoreoTiempo.java
+│ ├── InterfaceValidacionDatos.java
+│ ├── MenuTriage.java
+│ ├── MonitoreoTiempo.java
+│ └── ValidacionDatos.java
+
+├── Main.java
 
 ---
 
 ## Módulos Implementados
 
 ### 1. Módulo de Interfaz
-
-- Visualización de signos vitales, medicamentos y alergias.
-- Escala de Glasgow y resultados del triaje.
-- Ajustes de resolución y modo oscuro.
+- Visualización de datos vitales, medicamentos y alergias.
+- Escala de Glasgow, modo oscuro y configuración visual.
+- Cálculo y visualización de prioridades.
 
 ### 2. Módulo de Registro
-
-- Registro de pacientes en un `ArrayList` simulando una base de datos.
-- Consulta, edición y verificación de duplicados.
-- Control de acceso, seguridad y validaciones.
-- Simulación de integración con historial clínico.
+- Registro, consulta y edición de pacientes.
+- Validaciones y detección de duplicados.
+- Control de acceso y simulación de integración con historial clínico.
 
 ### 3. Módulo de Triage
+- Clasificación de pacientes según signos vitales.
+- Cálculo dinámico de prioridad (Strategy).
+- Monitoreo del tiempo de espera con alertas (Observer).
 
-- Registro y validación de signos vitales.
-- Cálculo automático de prioridad médica.
-- Monitoreo del tiempo de espera y alertas.
+### 4. Módulo de Administración de Recursos Médicos
+- Registro y gestión de medicamentos e insumos.
+- Filtrado por estado, historial de uso y control de stock.
+- Sincronización simulada en tiempo real.
+
+### 5. Módulo de Monitoreo del Sistema
+- Registro de accesos, consultas y modificaciones por usuario.
+- Búsqueda de logs, exportación simulada y validaciones de seguridad.
+- Autenticación, bloqueo y trazabilidad del sistema.
+
+### 6. Módulo de Historial Clínico
+- Consulta y actualización de eventos clínicos por paciente.
+- Registro de responsables, hora y tipo de operación.
+- Simulación de autorización, acceso y abandono de sesión.
 
 ---
 
-## Principios de Diseño (Solicitados Por el Proyecto)
+## Principios de Diseño Aplicados
 
--  Principios SOLID en la definición de interfaces.
-### -  Patrones de diseño:
-  - **Factory Method**: Registro de pacientes (Presente en la carpeta Registro en la clase RegistroPacienteFactory.java)
-  - **Strategy**: Cálculo de prioridad en Triage (El cálculo de la prioridad depende del Triage registrado y puede cambiar segun la necesidad) (Presente en la carpeta Triage en la clase ValidacionDatos.java)
-  - **Observer**: Alerta de espera en Triage (El sistema alerta si el tiempo de espera de un paciente es demasiado para una alerta específica) (Presente en la carpeta Triage en la clase MonitoreoTiempo.java)
+- **SOLID:** Interfaces bien definidas, separación de responsabilidades.
+- **Factory Method:** Creación de pacientes desde `RegistroPacienteFactory`.
+- **Strategy:** Lógica de prioridad médica según los datos en `ValidacionDatos`.
+- **Observer:** Sistema de alertas en el módulo de triaje (`MonitoreoTiempo`).
 
 ---
+
+## Tecnologías y Herramientas
+
+- Java SE 17
+- Programación orientada a objetos
+- Simulación de bases de datos con estructuras en memoria (`ArrayList`, `Map`)
+- Diseño modular por paquetes
+- Entrada y salida por consola
+
+---
+
+Este sistema demuestra cómo aplicar patrones de diseño y principios de arquitectura limpia para construir un simulador funcional, flexible y preparado para evolucionar hacia una versión más robusta y persistente.
+
