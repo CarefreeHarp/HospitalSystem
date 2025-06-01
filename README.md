@@ -7,10 +7,12 @@ Este sistema implementa principios de diseño SOLID y patrones como **Factory Me
 ---
 
 ## Integrantes del Proyecto
+```
 Daniel Felipe Ramírez Vargas
 Nicolás Castañeda Vargas
 Guillermo Aponte Cárdenas
 María Fernanda Cruz Niño
+```
 
 
 ---
