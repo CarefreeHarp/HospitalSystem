@@ -3,11 +3,13 @@
 Aplicación de consola en Java que simula el funcionamiento de los módulos clave de un sistema hospitalario, enfocado en el área de emergencias. Desarrollado como parte de un proyecto académico para la Pontificia Universidad Javeriana.
 Este proyecto busca la aplicación de los conocimientos adquiridos en la clase de Análisis y diseño de Software poniendo en práctica patrones de diseño de software y buenas prácticas de desarrollo entre los cuales están patrones creacionales como factory method, de comportamiendo como strategy o observer e incluso la aplicacion de principios SOLID para el desarrollo de nuestro sistema
 
+```plaintext
 Integrantes:
 Daniel Felipe Ramírez Vargas
 Nicolás Castañeda Vargas
 Guillermo Aponte Cardenas
 María Fernanda Cruz Niño 
+```
 
 
 
@@ -77,7 +79,7 @@ Hospital/
 ## Principios de Diseño (Solicitados Por el Proyecto)
 
 -  Principios SOLID en la definición de interfaces.
-# -  Patrones de diseño:
+### -  Patrones de diseño:
   - **Factory Method**: Registro de pacientes (Presente en la carpeta Registro en la clase RegistroPacienteFactory.java)
   - **Strategy**: Cálculo de prioridad en Triage (El cálculo de la prioridad depende del Triage registrado y puede cambiar segun la necesidad) (Presente en la carpeta Triage en la clase ValidacionDatos.java)
   - **Observer**: Alerta de espera en Triage (El sistema alerta si el tiempo de espera de un paciente es demasiado para una alerta específica) (Presente en la carpeta Triage en la clase MonitoreoTiempo.java)
