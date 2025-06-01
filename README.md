@@ -27,7 +27,7 @@ Los siguientes usuarios están habilitados para los módulos con control de acce
 
 ---
 
-## Estructura del Proyecto
+## Estructura del Proyecto (Está dividida por 6 modulos y una clase Main que los conecta)
  ```
 src/Hospital/
 ├── AdministracionDeRecursosMedicos/
